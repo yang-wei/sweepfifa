@@ -26,8 +26,8 @@
   </div>
     <div class="col-xs-12 pull-left round-row smaller" ng-repeat="game in matchday.games | orderBy:game.group">
       <button class="btn btn-group btn-xs btn-{{game.group}}">{{ (game.group.length === 1) ? game.group : NULL}}</button>
-      <img class="img-rounded country-flag-xs" ng-src="https://raw.githubusercontent.com/yang-wei/swipefifa/gh-pages/images/flags/{{ game.team1_key }}.png">{{ game.team1_title }} {{ game.team1_score }} VS
-      {{ game.team2_score }} {{ game.team2_title }} <img class="img-rounded country-flag-xs" ng-src="https://raw.githubusercontent.com/yang-wei/swipefifa/gh-pages/images/flags/{{ game.team2_key }}.png">
+      <img class="img-rounded country-flag-xs" ng-src="https://raw.githubusercontent.com/yang-wei/sweepfifa/master/images/flags/{{ game.team1_key }}.png">{{ game.team1_title }} {{ game.team1_score }} VS
+      {{ game.team2_score }} {{ game.team2_title }} <img class="img-rounded country-flag-xs" ng-src="https://raw.githubusercontent.com/yang-wei/sweepfifa/master/images/flags/{{ game.team2_key }}.png">
     <span class="pull-right"> {{ game.play_at*1000 | date : 'dd MMM h:mm a' }}</span></div>
 </div>
 </div>
