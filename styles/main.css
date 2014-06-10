@@ -1,0 +1,108 @@
+/* Space out content a bit */
+.round-row {
+  height: 50px;
+  padding-top: 15px;
+}
+.round-row {
+  background: #ECF0F1;
+}
+.round-date-row {
+  background:#34495e;
+  text-align: center;
+  color: #ffffff;
+}
+
+.country-flag-xs {
+  width: 40px;
+  padding: 0 10px;
+}
+
+.country-flag-sm {
+  width: 140px;
+  padding: 0 10px;
+}
+
+.scroll-top {
+  margin-top : -8px;
+}
+
+.footer {
+  padding: 20px;
+}
+.fixed-footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.white-font {
+  color: #ffffff;
+}
+
+.fixed-navbar {
+  width: 100%;
+  z-index: 1000;
+  position: fixed;
+}
+
+/*body {
+  background: #00a55a
+}*/
+
+body {
+  overflow: visible;
+}
+
+.hero {
+  display: table-cell;
+  vertical-align: middle;
+  height: 200px;
+  padding-top:110px;
+  font-size: 30px;
+  color: #eee;
+  background: rgba(0,165,90,0.8);
+  padding-bottom: 0;
+  font-family: 'Sintony', sans-serif;
+}
+
+.btn-group {
+  background: #ECF0F1;
+  color: #ffffff;
+}
+.btn-A {
+  background: #e74c3c;
+}
+.btn-B {
+  background: #1abc9c;
+}
+.btn-C {
+  background: #f1c40f;
+}
+.btn-D {
+  background: #2ecc71;
+}
+.btn-E {
+  background: #2980b9;
+}
+.btn-F {
+  background: #9b59b6;
+}
+.btn-G {
+  background: #16a085;
+}
+.btn-H {
+  background: #e67e22;
+}
+
+.yellow-text {
+  color: #f1c40f;
+}
+
+@media screen and (max-width: 568px) {
+  .smaller {
+    font-size: 13px;
+    padding-right:3px;
+    padding-left: 2px;
+    letter-spacing: -0.6px;
+  }
+}

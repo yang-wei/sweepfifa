@@ -1,0 +1,40 @@
+<nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+      <span class="sr-only">Toggle navigation</span>
+    </button>
+    <a class="navbar-brand" href="#">FIFA 2014</a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbar-collapse-01">
+    <ul class="nav navbar-nav">
+      <li><a href="#top?scrollTo=pos1">Group Stage</a></li>
+      <li><a href="#top?scrollTo=pos15">Playoff</a></li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav><!-- /navbar -->
+
+<div class="hero col-xs-12 text-center">
+  <p>Sweep your 2014 <span class="yellow-text">World Cup</span>
+    Schedule & Score on your Mobile
+</div>
+
+<div class="container schedule-container">
+
+  <div class="row list-group panel" ng-repeat="matchday in rounds">
+    <div class="col-xs-12 panel-heading pallete round-date-row" id="pos{{matchday.round.pos}}">
+    <strong>{{ matchday.round.title }}</strong>
+  </div>
+    <div class="col-xs-12 pull-left round-row smaller" ng-repeat="game in matchday.games | orderBy:game.group">
+      <button class="btn btn-group btn-xs btn-{{game.group}}">{{ (game.group.length === 1) ? game.group : NULL}}</button>
+      <img class="img-rounded country-flag-xs" ng-src="https://raw.githubusercontent.com/yang-wei/swipefifa/gh-pages/images/flags/{{ game.team1_key }}.png">{{ game.team1_title }} {{ game.team1_score }} VS
+      {{ game.team2_score }} {{ game.team2_title }} <img class="img-rounded country-flag-xs" ng-src="https://raw.githubusercontent.com/yang-wei/swipefifa/gh-pages/images/flags/{{ game.team2_key }}.png">
+    <span class="pull-right"> {{ game.play_at*1000 | date : 'dd MMM h:mm a' }}</span></div>
+</div>
+</div>
+
+<div class="footer navbar-default">
+  <div class="container">
+    <div class="text-muted">Source code is available at <a href="https://github.com/yang-wei/worldcup-2014">Github</a>. Built by <a href="https://plus.google.com/100165928033948455187/posts" rel="author">Yang Wei</a>
+  </div>
+  </div>
+</div>
