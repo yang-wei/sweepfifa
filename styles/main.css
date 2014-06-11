@@ -103,6 +103,15 @@ body {
     font-size: 13px;
     padding-right:3px;
     padding-left: 2px;
-    letter-spacing: -0.7px;
+    letter-spacing: -0.8px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .smaller {
+    font-size: 12px;
+    padding-right:2px;
+    padding-left: 2px;
+    letter-spacing: -0.9px;
   }
 }
