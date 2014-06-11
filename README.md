@@ -1,7 +1,5 @@
-2014 World Cup Guide
+2014 World Cup Guide. This site is live [here](isotope.pw)
 
 ####Data
-openfootball
+Thanks [openfootball](http://openfootball.github.io/build.html) for the awesome data.
 
-####Tool
-Angular JS
