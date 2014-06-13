@@ -3,7 +3,8 @@
 angular
   .module('worldcup2014App', [
     'ngResource',
-    'ngRoute'
+    'ngRoute',
+    'ngAnimate'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -38,6 +39,7 @@ angular
     };
   })
 
+  // custom filter to sort the epoch date
   .filter('customSort',function(){
     function sort (a, b) {
         if (a > b) { return 1; }

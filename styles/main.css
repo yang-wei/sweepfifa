@@ -116,6 +116,26 @@ body {
   }
 }
 
+  /* ng-animate */
+  .row-animate.ng-move,
+  .row-animate.ng-enter,
+  .row-animate.ng-leave {
+    -webkit-transition: all ease-in 0.5s;
+    transition: all ease-in 0.5s;
+  } 
+
+  .row-animate.ng-move,
+  .row-animate.ng-enter,
+  .row-animate.ng-leave {
+    opacity: 0;
+    max-height: 0;
+  }
+  .row-animate.ng-move,
+  .row-animate.ng-enter,
+  .row-animate.ng-leave {
+    opacity: 1;
+    max-height: 40px;  
+  }
 
 
 

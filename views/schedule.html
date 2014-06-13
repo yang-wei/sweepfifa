@@ -27,11 +27,11 @@
 
 <div class="container schedule-container">
 
-  <div class="row list-group panel" ng-repeat="matchday in rounds | filter:search">
+  <div class="row list-group panel row-animate"  ng-repeat="matchday in rounds | filter:search">
     <div class="col-xs-12 panel-heading pallete round-date-row" id="pos{{matchday.round.pos}}">
     <strong>{{ matchday.round.title }}</strong>
   </div>
-    <div class="col-xs-12 pull-left round-row smaller" ng-animate="'animate'" ng-repeat="game in matchday.games | customSort:'play_at' | filter:search">
+    <div class="col-xs-12 pull-left round-row smaller row-animate" ng-repeat="game in matchday.games | customSort:'play_at' | filter:search">
       <button class="btn btn-group btn-xs btn-{{game.group}}">{{ (game.group.length === 1) ? game.group : NULL}}</button>
       <img class="img-rounded country-flag-xs" ng-src="https://raw.githubusercontent.com/yang-wei/sweepfifa/gh-pages/images/flags/{{ game.team1_key }}.png">{{ game.team1_title }} {{ game.score1 }} VS
       {{ game.score2 }} {{ game.team2_title }} <img class="img-rounded country-flag-xs" ng-src="https://raw.githubusercontent.com/yang-wei/sweepfifa/gh-pages/images/flags/{{ game.team2_key }}.png">
@@ -46,19 +46,3 @@
   </div>
 </div>
 
-<style type="text/css">
-  /* ng-animate */
-  .animate-enter, .animate-leave {
-  transition: 500ms ease-in all;
-  position: relative;
-  display: block;
-  } 
-  .animate-enter.animate-enter-active, .animate-leave {
-  left: 0;
-  }
-  .animate-leave.animate-leave-active, .animate-enter {
-  left: 500px;
-}
-
-
-</style>
