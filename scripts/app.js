@@ -24,7 +24,7 @@ angular
     });
   })
 
-  .value('dbURL', 'https://rawgit.com/yang-wei/6893650a81087ad1a658/raw/35ad46cda6c9acba2ed908ee657594668628346f/worldcup2014db.json')
+  .value('dbURL', 'https://rawgit.com/yang-wei/6893650a81087ad1a658/raw/b32e8b405f46c830b8f21bf393f767dc60d014a2/worldcup2014db.json')
 
 
   .factory('httpRequest', function($http, dbURL) {
