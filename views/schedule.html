@@ -31,7 +31,7 @@
     <div class="col-xs-12 panel-heading pallete round-date-row" id="pos{{matchday.round.pos}}">
     <strong>{{ matchday.round.title }}</strong>
   </div>
-    <div class="col-xs-12 pull-left round-row smaller row-animate" ng-repeat="game in matchday.games | customSort:'play_at' | filter:search">
+    <div class="col-xs-12 pull-left round-row smaller" ng-repeat="game in matchday.games | customSort:'play_at' | filter:search">
       <button class="btn btn-group btn-xs btn-{{game.group}}">{{ (game.group.length === 1) ? game.group : NULL}}</button>
       <img class="img-rounded country-flag-xs" ng-src="https://raw.githubusercontent.com/yang-wei/sweepfifa/gh-pages/images/flags/{{ game.team1_key }}.png">{{ game.team1_title }} {{ game.score1 }} VS
       {{ game.score2 }} {{ game.team2_title }} <img class="img-rounded country-flag-xs" ng-src="https://raw.githubusercontent.com/yang-wei/sweepfifa/gh-pages/images/flags/{{ game.team2_key }}.png">
@@ -39,9 +39,10 @@
 </div>
 </div>
 
+ 
 <div class="footer navbar-default">
   <div class="container">
-    <div class="text-muted">Source code is available at <a href="https://github.com/yang-wei/worldcup-2014">Github</a>. Built by <a href="https://plus.google.com/100165928033948455187/posts" rel="author">Yang Wei</a>
+    <div class="text-muted">Source code is available at <a href="https://github.com/yang-wei/sweepfifa">Github</a>. Built by <a href="https://plus.google.com/100165928033948455187/posts" rel="author">Yang Wei</a>
   </div>
   </div>
 </div>

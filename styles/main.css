@@ -6,6 +6,10 @@
 .round-row {
   background: #ECF0F1;
 }
+.round-row:hover {
+  background: #ffffff;
+}
+
 .round-date-row {
   background:#34495e;
   text-align: center;
@@ -120,22 +124,20 @@ body {
   .row-animate.ng-move,
   .row-animate.ng-enter,
   .row-animate.ng-leave {
-    -webkit-transition: all ease-in 0.5s;
-    transition: all ease-in 0.5s;
+    -webkit-transition: all linear 0.5s;
+    transition: all linear 0.5s;
+    position: relative;
+    display: block:;
   } 
 
   .row-animate.ng-move,
   .row-animate.ng-enter,
-  .row-animate.ng-leave {
-    opacity: 0;
-    max-height: 0;
+  .row-animate.ng-leave.ng-leave-active {
+    left: -100%;
   }
-  .row-animate.ng-move,
-  .row-animate.ng-enter,
+  .row-animate.ng-move.ng-move-active,
+  .row-animate.ng-enter.ng-enter-active,
   .row-animate.ng-leave {
-    opacity: 1;
-    max-height: 40px;  
+    left: 0;
   }
-
-
-
+ 
