@@ -4,7 +4,8 @@ angular
   .module('worldcup2014App', [
     'ngResource',
     'ngRoute',
-    'ngAnimate'
+    'ngAnimate',
+    'duScroll'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -15,14 +16,6 @@ angular
       .otherwise({
         redirectTo: '/top'
       });
-  })
-
-
-  .run(function($rootScope, $location, $anchorScroll, $routeParams) {
-    $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
-      $location.hash($routeParams.scrollTo);
-      $anchorScroll();
-    });
   })
 
   .value('dbURL', 'https://dl.dropboxusercontent.com/s/4zyu1bawtbr5m75/worldcup2014db.json')
@@ -56,7 +49,6 @@ angular
     }
   })
 
-  
 
 
 

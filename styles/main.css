@@ -111,15 +111,19 @@ body {
   }
 }
 
-@media screen and (max-width: 400px) {
-  .smaller {
-    font-size: 12px;
-    padding-right:2px;
-    padding-left: 2px;
-    letter-spacing: -0.9px;
+@media screen and (max-width: 500px) {
+  span.desktop {
+    display: none;
+    visibility: hidden;
   }
 }
 
+@media screen and (min-width: 501px) {
+  span.mobile {
+    display: none;
+    visibility: hidden;
+  }
+}
   /* ng-animate */
   .row-animate.ng-move,
   .row-animate.ng-enter,
@@ -140,4 +144,17 @@ body {
   .row-animate.ng-leave {
     left: 0;
   }
+
+  .input-group {
+    width: 100%;
+  }
+
+  span.score {
+    font-family: serif;
+    padding: 0 2px;
+    font-weight: 800;
+    font-size: larger;
+  }
+
+
  
