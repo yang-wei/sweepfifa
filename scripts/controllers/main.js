@@ -25,4 +25,4 @@ angular.module('worldcup2014App')
     $scope.toAbout = function() {
     	$document.scrollTo(about, 0, 3000);
     };
-  });
+  })
