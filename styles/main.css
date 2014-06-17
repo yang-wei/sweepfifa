@@ -135,7 +135,7 @@ ul,
   .row-animate.ng-enter,
   .row-animate.ng-leave {
     -webkit-transition: all linear 0.5s;
-    transition: all linear 0.5s;
+    /*transition: all linear 0.5s;*/
     position: relative;
     display: block:;
   } 
