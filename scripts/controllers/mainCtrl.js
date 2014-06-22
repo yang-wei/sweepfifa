@@ -1,10 +1,13 @@
 'use strict';
 
-angular.module('worldcup2014App')
-  .controller('MainCtrl', function ($scope, httpRequest, $document){
+  app.controller('MainCtrl', function ($scope, httpRequest, $document, ProgressIndicator){
     // httpRequest.getRound(1).then(function(data){$scope.round1 = data;});
+    
+    ProgressIndicator.startSpinner();
+
     httpRequest.getRound().then(function (data) {
       	$scope.rounds = data;
+        ProgressIndicator.stopSpinner();
       });
 
     $scope.scrollToTop = function () {
