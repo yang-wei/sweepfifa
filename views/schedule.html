@@ -34,8 +34,17 @@
   </div>
     <div class="col-xs-12 pull-left round-row" ng-repeat="game in matchday.games | customSort:'play_at' | filter:search">
       <button class="btn btn-group btn-xs btn-{{game.group}}">{{ (game.group.length === 1) ? game.group : NULL}}</button>
-      <img class="img-rounded country-flag-xs" ng-src="https://raw.githubusercontent.com/yang-wei/sweepfifa/gh-pages/images/flags/{{ game.team1_key }}.png"><span class="desktop">{{ game.team1_title }}</span> <span class="mobile">{{ game.team1_code }}</span> <span class="score">{{ game.score1 }}</span> VS <span class="score">
-      {{ game.score2 }} </span> <span class="mobile">{{game.team2_code}}</span> <span class="desktop">{{ game.team2_title }}</span> <img class="img-rounded country-flag-xs" ng-src="https://raw.githubusercontent.com/yang-wei/sweepfifa/gh-pages/images/flags/{{ game.team2_key }}.png">
+      <img class="img-rounded country-flag-xs" ng-src="https://raw.githubusercontent.com/yang-wei/sweepfifa/gh-pages/images/flags/{{ game.team1_key }}.png">
+        <span class="desktop">{{ game.team1_title }}</span>
+          <span class="mobile">{{ game.team1_code }}</span>
+            <span class="score">{{ game.score1 }}</span>
+            <span class="penalty-score">{{ game.score1p }}</span> 
+        &nbsp;:
+            <span class="penalty-score">{{ game.score2p }}</span>
+            <span class="score">{{ game.score2 }} </span>
+          <span class="mobile">{{game.team2_code}}</span> 
+        <span class="desktop">{{ game.team2_title }}</span> 
+      <img class="img-rounded country-flag-xs" ng-src="https://raw.githubusercontent.com/yang-wei/sweepfifa/gh-pages/images/flags/{{ game.team2_key }}.png">
     <span class="pull-right small"> {{ 86400000 + game.play_at*1000  | date : 'dd MMM h:mm a' }}</span></div>
 </div>
 </div>

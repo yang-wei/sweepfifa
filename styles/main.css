@@ -162,5 +162,7 @@ ul,
     font-size: larger;
   }
 
-
+  span.penalty-score {
+    font-size: 12px;
+  }
  
