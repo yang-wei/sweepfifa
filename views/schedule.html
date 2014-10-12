@@ -28,11 +28,11 @@
 
 <div class="container schedule-container">
 
-  <div class="row list-group panel row-animate"  ng-repeat="matchday in rounds | filter:search">
+  <div class="row list-group panel row-animate"  ng-repeat="matchday in rounds | filter:search track by $index">
     <div class="col-xs-12 panel-heading pallete round-date-row" id="pos{{matchday.round.pos}}">
     <strong>{{ matchday.round.title }}</strong>
   </div>
-    <div class="col-xs-12 pull-left round-row" ng-repeat="game in matchday.games | customSort:'play_at' | filter:search">
+    <div class="col-xs-12 pull-left round-row" ng-repeat="game in matchday.games | customSort:'play_at' | filter:search track by $index">
       <button class="btn btn-group btn-xs btn-{{game.group}}">{{ (game.group.length === 1) ? game.group : NULL}}</button>
       <img class="img-rounded country-flag-xs" ng-src="https://raw.githubusercontent.com/yang-wei/sweepfifa/gh-pages/images/flags/{{ game.team1_key }}.png">
         <span class="desktop">{{ game.team1_title }}</span>
